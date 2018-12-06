@@ -15,7 +15,7 @@ Ubuntu 18.04 Bionic
 
     ```
     $ sudo apt-get update
-    
+
     $ sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 
     # Add APT key
@@ -173,19 +173,19 @@ This will first look for the image on local system and if it is not found, then 
 ```
 Unable to find image 'sonarqube:latest' locally
 latest: Pulling from library/sonarqube
-bc9ab73e5b14: Pull complete 
-193a6306c92a: Pull complete 
-e5c3f8c317dc: Pull complete 
-a587a86c9dcb: Pull complete 
-a4c7ee7ef122: Pull complete 
-a7c0dad691e9: Pull complete 
-367a6a68b113: Pull complete 
-60c0e52d1ec2: Pull complete 
-c9d22bc43935: Pull complete 
-884af0bfbb9a: Pull complete 
-35a8cd0c916a: Pull complete 
-9f9ecbe7a343: Pull complete 
-af800bded4f3: Pull complete 
+bc9ab73e5b14: Pull complete
+193a6306c92a: Pull complete
+e5c3f8c317dc: Pull complete
+a587a86c9dcb: Pull complete
+a4c7ee7ef122: Pull complete
+a7c0dad691e9: Pull complete
+367a6a68b113: Pull complete
+60c0e52d1ec2: Pull complete
+c9d22bc43935: Pull complete
+884af0bfbb9a: Pull complete
+35a8cd0c916a: Pull complete
+9f9ecbe7a343: Pull complete
+af800bded4f3: Pull complete
 Digest: sha256:cc57b262ee9e7145456dee8c7ae24622c82b22cabeaac4651e7dd642da806f2e
 Status: Downloaded newer image for sonarqube:latest
 91cc58ad0c2c7c24e7f6d530f1dbf507b1bbfbee6e92cac39a03f8ef4ddee7af
@@ -204,4 +204,18 @@ Only run command and exit
 ```
 $ sudo docker exec -it sonarqube hostname
 91cc58ad0c2c
+```
+
+## Start container
+
+
+
+```
+$ sudo docker container ls --all
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS                                            NAMES
+afef717a9286        postgres            "docker-entrypoint.s…"   12 minutes ago      Up 12 minutes              0.0.0.0:55432->5432/tcp                          postgres10
+ca5dcea88364        postgres            "docker-entrypoint.s…"   4 days ago          Exited (0) 3 days ago                                                       postgres
+
+$ sudo docker start postgres    # Or container id
 ```
